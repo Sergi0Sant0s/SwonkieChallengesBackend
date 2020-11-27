@@ -18,9 +18,10 @@ class EntryController extends BaseController{
     
     #Download all videos
     public function downloadVideos(Request $request){
+        $url = $request->input("url");
 
         #Checks if url exists
-        if(isset($request->all()["url"]))
+        if(isset($url))
         {
             //Get rss url from html
             $rssUrl = $this->helper->getRssUrl($request->all()["url"]);
