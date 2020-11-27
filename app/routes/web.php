@@ -1,18 +1,12 @@
 <?php
 
-/** @var \Laravel\Lumen\Routing\Router $router */
+/* API RESTFUL*/
+$router->post("/videos", "EntryController@downloadVideos");
+$router->get("/videos","EntryController@getAllVideos");
+$router->delete("/video/{id}", "EntryController@deleteVideos");
+$router->put("/video/{id}", "EntryController@editVideo");
 
-/*
-|--------------------------------------------------------------------------
-| Application Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register all of the routes for an application.
-| It is a breeze. Simply tell Lumen the URIs it should respond to
-| and give it the Closure to call when that URI is requested.
-|
-*/
-
+/* DEFAULT PAGE */
 $router->get(
     '/',
     function () use ($router) {
