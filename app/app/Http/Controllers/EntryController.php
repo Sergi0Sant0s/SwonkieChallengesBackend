@@ -34,7 +34,7 @@ class EntryController extends BaseController{
             return $this->helper->setData($result);
         }
         else{
-            return response("Not found", 404);
+            return response("Not Acceptable",406);
         }
     }
 
